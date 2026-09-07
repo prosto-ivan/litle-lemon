@@ -3,5 +3,6 @@ import greekSalad from '../images/icons_assets/greek salad.jpg'
 import lemonDessert from '../images/icons_assets/lemon dessert.jpg'
 import bruchetta from '../images/icons_assets/bruchetta.svg'
 import MarioAndAdrianA from '../images/icons_assets/Mario and Adrian A.jpg'
+import star from '../images/icons_assets/star.png'
 
-export {aboutPhoto, greekSalad, lemonDessert, bruchetta, MarioAndAdrianA}
+export {aboutPhoto, greekSalad, lemonDessert, bruchetta, MarioAndAdrianA, star}

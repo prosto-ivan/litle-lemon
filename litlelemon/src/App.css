@@ -1,50 +1,397 @@
+/* 
+for nav - monospace bold 
+h1 h2 - Gill Sans
+text - Calibri ?
+*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 64px;
+  color: #F4CE14;
+}
+
+h2 {
+  font-family: Gill Sans;
+  font-weight: 600;
+}
+
+h3 {
+  font-family:Verdana;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  color: black;
+  background-color: #F4CE14;
+  border: none;
+  border-radius: 13px;
+  font-family:sans-serif ;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+
+/* ================= HEADER ================= */
+
 .header {
-  height: 100px;
+  min-height: 100px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 200px;
-  padding-right: 200px
+
+  padding: 20px 8%;
+  gap: 40px;
 }
+
+.header img {
+  width: clamp(140px, 15vw, 200px);
+  height: auto;
+}
+
+
+/* ================= NAV ================= */
 
 .nav {
   display: flex;
-  gap: 100px;
-  list-style: none
+  align-items: center;
+  font-family:monospace bold;
+
+  gap: clamp(20px, 4vw, 60px);
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.main .about {
-  display: flex;
-  background-color: #495E57;
-  height: 40vh;
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* ================= MAIN ================= */
+
+.main {
   width: 100%;
-  gap: 100px;
+}
+
+.about h2,
+.about div {
+  color: #EDEFEE;
+}
+
+.about {
+  display: flex;
+  align-items: stretch;
+}
+
+.about article {
+  display: flex;
+  flex-direction: column;
+}
+
+.about article button {
+  margin-top: auto;
+  align-self: center;
+
+  height: 45px;
+  width: 120px;
+
+  transform: translateY(50%);
+}
+
+
+/* ================= ABOUT / HERO ================= */
+
+.main .about {
+  width: 100%;
+  min-height: 290px;
+
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+
+  background-color: #495E57;
+
+  padding: 40px 15%;
+  gap: 60px;
 }
 
 .main .about article {
-  width: 100%;
-  height: 100%;
-  margin-left: 277px;
+  flex: 1;
+  min-width: 0;
 }
 
 .main .about img {
+  width: min(35%, 350px);
+  height: 280px;
+
+  object-fit: cover;
+
   border: 3px solid #F4CE14;
   border-radius: 10px;
-  margin-top: 5%;
-  height: 90%;
-  margin-right: 273px;
 }
+
+/* ================= MENU ======================== */
+
+.Menu .another button {
+  
+  height: 50px;
+  width: 150px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  margin-top: 50px;
+}
+
+.card {
+  background-color: #F4F4F4;
+  width: 25vw;
+  border-radius: 10px;
+}
+
+.card>*:not(.image) {
+  padding: 10px;
+}
+
+.card p {
+  height: auto;
+  font-size: 16px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+/* ================= ІНШІ СЕКЦІЇ ================= */
+
+.Menu,
+.Testimonials,
+.some {
+  padding: 60px 10%;
+}
+
+.another {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+}
+
+/* ================= Testiminial ============ */
+
+.testimonials {
+  display: flex;
+  justify-content: space-around;
+}
+
+.testimonials h3 {
+  text-align: end;
+  margin-right: 10%;
+}
+
+.testimonial {
+  border-radius: 5%;
+  padding: 20px;
+  background-color: #495E57;
+  color: #F4F4F4;
+  width: 20%;
+}
+
+.testimonial p {
+  font-size: 16px
+}
+
+
+/* ================= FOOTER ================= */
 
 .footer {
   margin-top: 5%;
-  display: grid ;
-  grid-template-columns: 1fr 1fr;
-  margin-left: 15%;
-  margin-right: 15%;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+
+  gap: 50px;
+
+  padding: 40px 15%;
+}
+
+.footer img {
+  align-self: center;
+  width: 180px;
+  max-width: 100%;
 }
 
 .links {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+.links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1024px) {
+
+  .header {
+    padding: 20px 5%;
+  }
+
+  .main .about {
+    padding: 40px 8%;
+  }
+
+  .card p {
+    height: auto;
+    font-size: 13px;
+  }
+
+  .Menu,
+  .Testimonials,
+  .some {
+    padding: 50px 8%;
+  }
+
+  .footer {
+    padding: 40px 8%;
+  }
+}
+
+
+/* ================= PHONE ================= */
+
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 20px;
+  }
+
+  .nav {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px 25px;
+
+    width: 100%;
+  }
+
+  .nav li {
+    text-align: center;
+  }
+
+
+  .main .about {
+    flex-direction: column;
+
+    padding: 30px 20px;
+
+    gap: 30px;
+  }
+
+  .main .about article {
+    width: 100%;
+  }
+
+  .main .about img {
+    width: 100%;
+    max-width: 400px;
+
+    height: 250px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .card {
+    background-color: #F4F4F4;
+    width: 50vw;
+  }
+
+  .card p {
+    height: auto;
+    font-size: 14px;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .Menu,
+  .Testimonials,
+  .some {
+    padding: 40px 20px;
+  }
+
+  .testimonial p {
+    font-size: 13px
+  }
+
+  .testimonial {
+    width: 25%;
+  }
+
+
+  .footer {
+    grid-template-columns: 1fr;
+
+    padding: 40px 20px;
+
+    gap: 30px;
+  }
+
+  .footer img {
+    justify-self: center;
+    width: 180px;
+    max-width: 100%;
+  }
+
+  .links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ================= SMALL PHONE ================= */
+
+@media (max-width: 480px) {
+
+  .nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial {
+    width: 25%;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+  }
 }
